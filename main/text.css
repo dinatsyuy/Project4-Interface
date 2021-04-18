@@ -1,0 +1,213 @@
+* {
+	box-sizing:border-box;
+}
+
+html {
+	font-size:10px;
+}
+
+body {
+	font-family: 'Cormorant Garamond', serif;
+	font-size:2rem;
+}
+
+strong {
+	font-size:2rem;
+}
+
+h3 {
+	font-family: 'Spectral', serif;
+}
+
+h1 {
+	font-family: 'Libre Barcode 39 Text', cursive;
+	text-transform: uppercase;
+	font-size: 16rem;
+	min-height: 900px;
+}
+
+h2 {
+	font-family: 'Spectral', serif;
+	font-weight:normal;
+}
+
+h3 {
+	font-size: 5rem;
+	font-weight: normal;
+	font-size: 3rem;
+}
+
+img {
+	position: relative;
+	align-items: right;
+}
+
+.main-column {
+	max-width: 1200px;
+	margin:auto;
+	height: 2500px;
+	display: grid;
+	grid-auto-columns: 1fr 1fr;
+}
+
+
+.by-two {
+	margin:auto;
+	max-width:1200px;
+	min-height:100vh;
+	/*background:red;*/
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+
+.doors {
+	/*background:blue;*/
+	height:100%;
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+	grid-column-gap: 2rem;
+	grid-row-gap: 2rem;
+}
+
+
+.door-way {
+	position:relative;
+	height: 200px;
+	width: 120px;
+}
+
+.door-front {	
+	position:absolute;
+	z-index:1;
+	height: 200px;
+	width: 120px;
+	transform-origin: 0 50%;
+	transition: all .2s ease-in;
+}
+
+	.door-inlay {
+		z-index: 1;
+		position: absolute;
+		background-color:transparent;        
+        height: 180px;
+		width: 102px;
+		top: 9px;
+		left: 8px;
+		transform-origin: 0 50%;
+		transition: all .2s ease-in;
+	}
+
+	.door-handle {
+		z-index: 2;		
+		border-radius: 50%;
+		position: absolute;
+        height: 12px;
+		width: 12px;
+		top: 100px;
+		left: 90px;
+		transform-origin: 0 50%;
+		transition: all .2s ease-in;
+	}
+
+	.door-behind {
+		z-index: 0;
+		position: absolute;
+		top:0; left:0;
+		background-size: cover;
+        border: 6px solid #000000;
+        height: 200px;
+		width: 120px;				
+		transform-origin: 0 50%;
+		transition: all .2s ease-in;
+	}
+
+	.door-front:active {
+		transform: perspective(1000px) rotateY(-88deg);
+	}
+
+
+.door-front-01 { background-color: #C01823; }
+.door-inlay-01 { border: 6px solid #EAC5BD; }
+.door-handle-01 { background-color: #FBAD18; }
+.door-behind-01 { background-image: url(amazonbox1.jpg); }
+
+.door-front-02 { background-color: #ABCBB7; }
+.door-inlay-02 { border: 6px solid #003462;	}
+.door-handle-02 { background-color: #514835; }
+.door-behind-02 {background-image: url('ebaybox2.png'); }
+
+.door-front-03 { background-color: #003462; }
+.door-inlay-03 { border: 6px solid #CCD6E0;	}
+.door-handle-03 { background-color: #FBAD18; }
+.door-behind-03 {background-image: url('ebaybox1.jpg');
+				background-position: center; }
+
+.door-front-04 { background-color: #FBAD18; }
+.door-inlay-04 { border: 6px solid #00692F;	}
+.door-handle-04 { background-color: #514835; }
+.door-behind-04 {background-image: url('boxes1.jpg'); }
+
+.door-front-05 { background-color: #FBAD18; }
+.door-inlay-05 { border: 6px solid #00692F;	}
+.door-handle-05 { background-color: #514835; }
+.door-behind-05 {background-color: transparent;
+				font-family: 'Courier New', monospace;
+				font-size: 14px;
+				text-align: center;}
+
+.door-front-06 { background-color: #C01823; }
+.door-inlay-06 { border: 6px solid #EAC5BD; }
+.door-handle-06 { background-color: #FBAD18; }
+.door-behind-06 { background-image: url('amazonbox5.png'); }
+
+.door-front-07 { background-color: #ABCBB7; }
+.door-inlay-07 { border: 6px solid #003462;	}
+.door-handle-07 { background-color: #514835; }
+.door-behind-07 {background-image: url('russianbox1.jpg');
+				background-size: cover;
+				background-position: center; }
+
+.door-front-08 { background-color: #003462; }
+.door-inlay-08 { border: 6px solid #CCD6E0;	}
+.door-handle-08 { background-color: #FBAD18; }
+.door-behind-08 {background-image: url('ozonbox1.jpg'); 
+				background-size: cover;
+				background-position: center;}
+
+.door-front-09 { background-color: #003462; }
+.door-inlay-09 { border: 6px solid #CCD6E0;	}
+.door-handle-09 { background-color: #FBAD18; }
+.door-behind-09 {background-image: url('chinesebox1.jpg'); 
+				background-size: cover;
+				background-position: center;}
+
+.door-front-10 { background-color: #ABCBB7; }
+.door-inlay-10 { border: 6px solid #003462;	}
+.door-handle-10 { background-color: #514835; }
+.door-behind-10 {background-image: url('koreabox1.jpeg'); }
+
+.door-front-11 { background-color: #FBAD18; }
+.door-inlay-11 { border: 6px solid #00692F;	}
+.door-handle-11 { background-color: #514835; }
+.door-behind-11 {background-image: url('amazonbox6.jpg'); }
+
+.door-front-12 { background-color: #C01823; }
+.door-inlay-12 { border: 6px solid #EAC5BD; }
+.door-handle-12 { background-color: #FBAD18; }
+.door-behind-12 { background-color: transparent;
+				font-family: 'Courier New', monospace;
+				font-size: 14px;
+				text-align: center;}
+
+
+
+
+
+
+
+
+
+
+
